@@ -1,0 +1,11 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.todoListContainer{
+  outline: red dashed 1px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(245, 245, 245);
+}
