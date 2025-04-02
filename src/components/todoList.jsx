@@ -26,7 +26,7 @@ export default function ToDoApp() {
   }, [doneTasks]);
 
   const addTask = (newTask) => {
-    setTasks([...tasks, { ...newTask, id: Date.now() }]); 
+    setTasks([...tasks, { ...newTask, id: Date.now() }]);
   };
 
   const markTaskAsDone = (task) => {
@@ -50,11 +50,22 @@ export default function ToDoApp() {
     setIsModalOpen(true);
   };
 
+  // Toggle Done List visibility using CSS class
+  const toggleDoneTasks = () => {
+    document.querySelector(".doneList").classList.toggle("show");
+  };
+
   return (
     <div className="subTodoListContainer">
       <div className="todoList">
         <div className="headerContainer">
           <p>To-Do List</p>
+        </div>
+
+        <div className="seeDoneTaskButton">
+          <button className="doneButton" onClick={toggleDoneTasks}>
+            See Done Tasks
+          </button>
         </div>
 
         <div className="taskContainer">
@@ -81,6 +92,12 @@ export default function ToDoApp() {
       <div className="doneList">
         <div className="headerContainer">
           <p>Done tasks</p>
+        </div>
+
+        <div className="seeDoneTaskButton">
+          <button className="doneButton" onClick={toggleDoneTasks}>
+            Hide Done Tasks
+          </button>
         </div>
 
         <div className="doneTaskContainer">
