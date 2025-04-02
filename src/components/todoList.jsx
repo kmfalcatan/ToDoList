@@ -50,7 +50,6 @@ export default function ToDoApp() {
     setIsModalOpen(true);
   };
 
-  // Toggle Done List visibility using CSS class
   const toggleDoneTasks = () => {
     document.querySelector(".doneList").classList.toggle("show");
   };
