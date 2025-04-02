@@ -16,7 +16,6 @@
 }
 
 .subTodoListContainer{
-  outline: red dashed 1px;
   height: 100%;
 }
   
@@ -106,7 +105,7 @@
 }
 
 .doneList.show {
-  display: flex; /* Show when the class is added */
+  display: flex;
 }
   
 .doneTaskContainer{
@@ -134,14 +133,13 @@
 }
 
 .seeDoneTaskButton{
-  outline: red dashed 1px;
   height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.doneButton{
+.doneButton1{
   height: 2.5rem;
   width: 10rem;
   border-radius: 0.5rem;
@@ -154,12 +152,15 @@
   color: white;
 }
 
-.doneButton:hover{
+.doneButton1:hover{
   transform: scale(1.05);
 }
 
 @media only screen and (min-width: 1025px){
-  
+  .seeDoneTaskButton{
+    display: none;
+  }
+
   .subTodoListContainer{
     display: grid;
     grid-template-columns: 1fr 20rem;
@@ -258,6 +259,7 @@
   
   .doneList{
     height: 100%;
+    position: relative;
     background-color: rgb(230, 230, 230);
     display: flex;
   }

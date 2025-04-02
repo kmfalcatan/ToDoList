@@ -40,11 +40,11 @@ const ModalTask = ({ isOpen, onClose, task, markTaskAsDone, deleteTask, isTaskDo
 
             <div className="addList">
               <p>List items:</p>
-              <ul className="listItem">
+              <div className="listItem">
                 {task.list.map((subTask, index) => (
                   <li key={index} className="item">{subTask}</li>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

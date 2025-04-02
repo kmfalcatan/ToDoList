@@ -63,7 +63,7 @@ export default function ToDoApp() {
         </div>
 
         <div className="seeDoneTaskButton">
-          <button className="doneButton" onClick={toggleDoneTasks}>
+          <button className="doneButton1" onClick={toggleDoneTasks}>
             See Done Tasks
           </button>
         </div>
@@ -73,7 +73,7 @@ export default function ToDoApp() {
             <img className="addImage" src={Add} alt="Add Task" />
           </div>
 
-          {tasks.length === 0 ? <p>No tasks yet.</p> : null}
+          {tasks.length === 0 ? <p></p> : null}
           {tasks.map((task) => (
             <div key={task.id} onClick={() => openTaskModal(task, false)} className="subTaskContainer">
               <div className="titleContainer">
@@ -95,7 +95,7 @@ export default function ToDoApp() {
         </div>
 
         <div className="seeDoneTaskButton">
-          <button className="doneButton" onClick={toggleDoneTasks}>
+          <button className="doneButton1" onClick={toggleDoneTasks}>
             Hide Done Tasks
           </button>
         </div>
