@@ -1,3 +1,4 @@
+
 .modalContainer{
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.384);
@@ -10,130 +11,143 @@
 }
 
 .subModalContainer{
-  height: 30rem;
-  width: 28rem;
-  background-color: rgb(245, 245, 245);
-  border-radius: 1rem;
-}
-
-.closeContainer{
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(50, 42, 42);
-}
-
-p{
-  color: rgb(50, 42, 42);
-}
-
-button{
-  color: rgb(50, 42, 42);
-}
-
-.close{
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  height: 90%;
-}
-
-.addListContainer{
-}
-
-.subAddListContainer{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.addList{
   width: 90%;
-  font-size: 1.2rem;
-  color: rgb(50, 42, 42);
+  height: 31rem;
 }
 
-.inputTitle{
-  width: 100%;
-  color: rgb(50, 42, 42);
-  background-color: rgb(204, 204, 204);
-  height: 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.listItem{
-  width: 100%;
-  color: rgb(50, 42, 42);
-  height: 12rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  background-color: rgb(204, 204, 204);
-  overflow: auto;
-}
-
-.item{
-  padding-left: 0.5rem;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f100; 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-
-.buttonContainer{
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+.doneButton, .deleteButton{
+  width: 9rem;
 }
 
 .doneButton{
-  height: 2.5rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  border: none;
-  background-color: rgb(133, 133, 133);
-  border: solid rgb(204, 204, 204) 1px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.15s;
   color: white;
 }
 
-.doneButton:hover{
-  transform: scale(1.05);
-}
-
-.deleteButton{
-  height: 2.5rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  border: none;
-  background-color: rgb(204, 204, 204);
-  border: solid rgb(204, 204, 204) 1px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.deleteButton:hover{
-  transform: scale(1.05);
+@media only screen and (min-width: 1025px){
+  
+  .subModalContainer{
+    height: 30rem;
+    width: 28rem;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1rem;
+  }
+  
+  .closeContainer{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(50, 42, 42);
+  }
+  
+  p{
+    color: rgb(50, 42, 42);
+  }
+  
+  button{
+    color: rgb(50, 42, 42);
+  }
+  
+  .close{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    height: 90%;
+  }
+  
+  .subAddListContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .addList{
+    width: 90%;
+    font-size: 1.2rem;
+    color: rgb(50, 42, 42);
+  }
+  
+  .inputTitle{
+    width: 100%;
+    color: rgb(50, 42, 42);
+    background-color: rgb(204, 204, 204);
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .listItem{
+    width: 100%;
+    color: rgb(50, 42, 42);
+    height: 12rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background-color: rgb(204, 204, 204);
+    overflow: auto;
+  }
+  
+  .item{
+    padding-left: 0.5rem;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .buttonContainer{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .doneButton{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgb(133, 133, 133);
+    border: solid rgb(204, 204, 204) 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: white;
+  }
+  
+  .doneButton:hover{
+    transform: scale(1.05);
+  }
+  
+  .deleteButton{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgb(204, 204, 204);
+    border: solid rgb(204, 204, 204) 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  
+  .deleteButton:hover{
+    transform: scale(1.05);
+  }
 }
