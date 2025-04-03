@@ -1,0 +1,290 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+}
+  
+.headerContainer{
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(50, 42, 42);
+}
+
+.subTodoListContainer{
+  height: 100%;
+}
+  
+.taskContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  max-height: 31.5rem;
+  overflow: auto;
+}
+
+.addContainer{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.addContainer:hover{
+  transform: scale(1.05);
+}
+
+.addImage{
+  height: 5rem;
+}
+
+.subTaskContainer{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 1rem;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.subTaskContainer:hover{
+  transform: scale(1.05);
+}
+
+.titleContainer{
+  padding: 0.3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(50, 42, 42);
+}
+
+.task {
+  font-size: 1.2rem;
+  color: rgb(50, 42, 42);
+  max-height: 11.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; 
+  -webkit-box-orient: vertical;
+  line-height: 1.9rem; 
+  position: relative;
+}
+
+.subTask{
+  margin-left: 0.5rem;
+}
+
+.doneList{
+  display: none;
+  position: absolute;
+  top: 0rem;
+  height: 100%;
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+  flex-direction: column;
+}
+
+.doneList.show {
+  display: flex;
+}
+  
+.doneTaskContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  max-height: 31.5rem;
+  overflow: auto;
+}
+
+.subDoneTaskContainer{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 1rem;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.subDoneTaskContainer:hover{
+  transform: scale(1.05);
+}
+
+.seeDoneTaskButton{
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doneButton1{
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(133, 133, 133);
+  border: solid rgb(204, 204, 204) 1px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: white;
+}
+
+.doneButton1:hover{
+  transform: scale(1.05);
+}
+
+@media only screen and (min-width: 1025px){
+  .seeDoneTaskButton{
+    display: none;
+  }
+
+  .subTodoListContainer{
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    height: 100%;
+  }
+  
+  .todoList{
+    height: 100%;
+  }
+  
+  .headerContainer{
+    height: 4rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    color: rgb(50, 42, 42);
+  }
+  
+  .taskContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    max-height: 31.5rem;
+    overflow: auto;
+  }
+  
+  .addContainer{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  
+  .addContainer:hover{
+    transform: scale(1.05);
+  }
+  
+  .addImage{
+    height: 5rem;
+  }
+  
+  .subTaskContainer{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  
+  .subTaskContainer:hover{
+    transform: scale(1.05);
+  }
+  
+  .titleContainer{
+    padding: 0.3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(50, 42, 42);
+  }
+  
+  .task {
+    font-size: 1.2rem;
+    color: rgb(50, 42, 42);
+    max-height: 11.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; 
+    -webkit-box-orient: vertical;
+    line-height: 1.9rem; 
+    position: relative;
+  }
+  
+  .subTask{
+    margin-left: 0.5rem;
+  }
+  
+  .doneList{
+    height: 100%;
+    position: relative;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+  }
+  
+  .doneTaskContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    max-height: 31.5rem;
+    overflow: auto;
+  }
+  
+  .subDoneTaskContainer{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  
+  .subDoneTaskContainer:hover{
+    transform: scale(1.05);
+  }
+}
