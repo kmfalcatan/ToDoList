@@ -1,290 +1,414 @@
-
-*{
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto";
-}
-  
-.headerContainer{
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: rgb(50, 42, 42);
-}
-
-.subTodoListContainer{
+.SubTodoListContainer{
+  width: 90%;
   height: 100%;
-}
-  
-.taskContainer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
-  max-height: 31.5rem;
-  overflow: auto;
-}
-
-.addContainer{
-  height: 15rem;
-  width: 15rem;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(199, 199, 199);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.addContainer:hover{
-  transform: scale(1.05);
-}
-
-.addImage{
-  height: 5rem;
-}
-
-.subTaskContainer{
-  height: 15rem;
-  width: 15rem;
-  border-radius: 1rem;
-  background-color: rgb(199, 199, 199);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.subTaskContainer:hover{
-  transform: scale(1.05);
-}
-
-.titleContainer{
-  padding: 0.3rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title{
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(50, 42, 42);
-}
-
-.task {
-  font-size: 1.2rem;
-  color: rgb(50, 42, 42);
-  max-height: 11.5rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 6; 
-  -webkit-box-orient: vertical;
-  line-height: 1.9rem; 
-  position: relative;
-}
-
-.subTask{
-  margin-left: 0.5rem;
-}
-
-.doneList{
-  display: none;
-  position: absolute;
-  top: 0rem;
-  height: 100%;
-  background-color: rgb(230, 230, 230);
-  width: 100%;
   flex-direction: column;
 }
 
-.doneList.show {
-  display: flex;
-}
-  
-.doneTaskContainer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
-  max-height: 31.5rem;
-  overflow: auto;
+.todoList{
+  width: 100%;
 }
 
-.subDoneTaskContainer{
-  height: 15rem;
-  width: 15rem;
-  border-radius: 1rem;
-  background-color: rgb(199, 199, 199);
+.light{
+  background-color: #F8FAFC;
+}
+
+.dark{
+  background-color: #121212;
+}
+
+.titleContainer{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  font-weight: bold;
+}
+
+.titleContainer.light{
+  color: #1E293B;
+}
+
+.titleContainer.dark{
+  color: #E2E8F0;
+}
+
+.toggle-container {
+  width: 40px;
+  height: 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
   cursor: pointer;
-  transition: all 0.15s;
+  position: relative;
+  transition: background 0.3s ease-in-out;
 }
 
-.subDoneTaskContainer:hover{
-  transform: scale(1.05);
+.toggle-container.light {
+  background-color: #1E1E2E; /* Light mode background */
 }
 
-.seeDoneTaskButton{
-  height: 2.5rem;
+.toggle-container.dark { 
+  background-color: #F8FAFC;/* Dark mode background */
+}
+
+.toggle-switch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: background 0.3s ease-in-out;
 }
 
-.doneButton1{
-  height: 2.5rem;
-  width: 10rem;
+.toggle-switch.light {
+  background-color: #F8FAFC; /* Switch in light mode */
+}
+
+.toggle-switch.dark {
+  background-color: #121212; /* Switch in dark mode */
+}
+
+.modeContainer{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.inputContainer{
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.input{
+  width: 100%;
+  height: 2rem;
   border-radius: 0.5rem;
   border: none;
-  background-color: rgb(133, 133, 133);
-  border: solid rgb(204, 204, 204) 1px;
+  padding-left: 0.5rem;
   font-size: 1.2rem;
+}
+
+.input.light{
+  background-color:  #E2E8F0;
+  color: #1E293B;
+}
+
+.input.dark{
+  background-color: #334155;
+  color: #E2E8F0;
+}
+
+.input1.light{
+  background-color:  #E2E8F0;
+  color: #1E293B;
+}
+
+.input1.dark{
+  background-color: #334155;
+  color: #E2E8F0;
+}
+
+.button{
+  height: 2rem;
+  width: 5rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: all 0.15s;
+}
+
+.button:hover{
+  background-color: #3B75D9;
+  transform: scale(1.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.button.light{
+  background-color: #2563EB;
   color: white;
 }
 
-.doneButton1:hover{
-  transform: scale(1.05);
+.button.dark{
+  background-color:  #4C89F1;
+  color: #F1F5F9;
 }
 
+.categoryContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.input1{
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.descriptionContainer{
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.description:hover{
+  font-weight: 700;
+}
+
+.description.light{
+  color: #1E293B;
+}
+
+.description.dark{
+  color: #E2E8F0;
+}
+
+.inputDescription {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.inputDescription.light{
+  background-color:  #E2E8F0;
+  color: #1E293B;
+}
+
+.inputDescription.dark{
+  background-color: #334155;
+  color: #E2E8F0;
+}
+
+input.dark::placeholder{
+  color: #E2E8F0;
+}
+
+input.light::placeholder{
+  color: #1e293b;
+}
+
+textarea.dark::placeholder{
+  color: #E2E8F0;
+}
+
+textarea.light::placeholder{
+  color: #1e293b;
+}
+
+.filterContainer{
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  border-top: solid gray 1px;
+  padding-top: 1rem;
+  justify-content: center;
+}
+
+.filterContainer.light{
+  color: #1E293B;
+}
+
+.filterContainer.dark{
+  color: #E2E8F0;
+}
+
+.filter{
+  cursor: pointer;
+}
+
+.taskContainer{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subTaskContainer {
+  background-color: #2A3D44;
+  border-radius: 0.5rem 0.5rem 0.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  height: 3rem; /* Default height */
+  position: relative;
+  border-top: solid #F87171 4px;
+}
+
+.subTaskInput {
+  width: 100%;
+  height: 4rem;
+  color: #94A3B8;
+  border-radius: 0.25rem;
+  resize: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.description2{
+  margin: 0.5rem;
+}
+
+.description1{
+  margin: 1rem 0rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.expandButton {
+  background-color: #34D399;
+  width: 8rem;
+  padding: 0.1rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  color: #E2E8F0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: -1.15rem;
+}
+
+.expandButton:hover {
+  background-color: #2DCA81;
+}
+
+.checkBoxContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subCheckBoxContainer{
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+}
+
+.nameTaskContainer{
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  color: #E2E8F0;
+  max-width: 10rem;
+  overflow: auto;
+  flex-direction: column;
+  
+}
+
+.data{
+  font-size: 0.8rem;
+  color: #94A3B8;
+}
+
+.nameContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Hide default checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E2E8F0; /* Border for the checkbox */
+  border-radius: 4px; /* Rounded corners */
+  position: relative;
+  cursor: pointer;
+  background-color: #E2E8F0; /* Default background */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* When checked, change the background and border color */
+input[type="checkbox"]:checked {
+  background-color: #34D399; /* Color when checked */
+  border-color: #34D399;
+}
+
+/* Adding a check mark (icon) inside the checkbox */
+input[type="checkbox"]:checked::before {
+  content: '\2713'; /* Unicode for a check mark */
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  font-size: 16px;
+  color: white; /* Check mark color */
+}
+
+.editContainer{
+  height: 3rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editButton{
+  cursor: pointer;
+}
+
+/*tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1024px){
+  .filterContainer{
+    font-size: 1.2rem;
+  }
+}
+
+/*laptop*/
 @media only screen and (min-width: 1025px){
-  .seeDoneTaskButton{
-    display: none;
+  .SubTodoListContainer{
+    width: 40rem;
   }
 
-  .subTodoListContainer{
-    display: grid;
-    grid-template-columns: 1fr 20rem;
-    height: 100%;
-  }
-  
-  .todoList{
-    height: 100%;
-  }
-  
-  .headerContainer{
-    height: 4rem;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    padding-left: 1rem;
-    color: rgb(50, 42, 42);
-  }
-  
-  .taskContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    max-height: 31.5rem;
-    overflow: auto;
-  }
-  
-  .addContainer{
-    height: 15rem;
-    width: 15rem;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(199, 199, 199);
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  
-  .addContainer:hover{
-    transform: scale(1.05);
-  }
-  
-  .addImage{
-    height: 5rem;
-  }
-  
-  .subTaskContainer{
-    height: 15rem;
-    width: 15rem;
-    border-radius: 1rem;
-    background-color: rgb(199, 199, 199);
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  
-  .subTaskContainer:hover{
-    transform: scale(1.05);
-  }
-  
-  .titleContainer{
-    padding: 0.3rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .title{
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(50, 42, 42);
-  }
-  
-  .task {
+  .filterContainer{
     font-size: 1.2rem;
-    color: rgb(50, 42, 42);
-    max-height: 11.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6; 
-    -webkit-box-orient: vertical;
-    line-height: 1.9rem; 
-    position: relative;
   }
-  
-  .subTask{
-    margin-left: 0.5rem;
-  }
-  
-  .doneList{
-    height: 100%;
-    position: relative;
-    background-color: rgb(230, 230, 230);
-    display: flex;
-  }
-  
-  .doneTaskContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    max-height: 31.5rem;
-    overflow: auto;
-  }
-  
-  .subDoneTaskContainer{
-    height: 15rem;
-    width: 15rem;
-    border-radius: 1rem;
-    background-color: rgb(199, 199, 199);
+
+  .filter{
     cursor: pointer;
     transition: all 0.15s;
+    width: 8rem;
+    text-align: center;
   }
   
-  .subDoneTaskContainer:hover{
-    transform: scale(1.05);
+  .filter:hover{
+    font-weight: bold;
+    transform: scale(1.1);
   }
 }
