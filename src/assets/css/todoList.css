@@ -329,10 +329,9 @@ input.light::placeholder{
   font-size: 1.2rem;
   margin-left: 0.5rem;
   color: #E2E8F0;
-  max-width: 10rem;
+  max-width: 100%;
   overflow: auto;
   flex-direction: column;
-  
 }
 
 .data{
