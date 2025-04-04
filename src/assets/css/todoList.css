@@ -453,7 +453,6 @@ input[type="checkbox"]:checked::before {
 }
 
 .saveContainer{
-  outline: red dashed 1px;
   width: 100%;
   display: flex;
   justify-content: center;
