@@ -214,12 +214,17 @@ input.light::placeholder{
   color: #1e293b;
 }
 
-textarea.dark::placeholder{
+.inputDescription.dark::placeholder{
   color: #E2E8F0;
 }
 
-textarea.light::placeholder{
+.inputDescription.light::placeholder{
   color: #1e293b;
+}
+
+.expandButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .filterContainer{
@@ -249,7 +254,7 @@ textarea.light::placeholder{
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .subTaskContainer {
@@ -381,6 +386,125 @@ input[type="checkbox"]:checked::before {
 
 .editButton{
   cursor: pointer;
+}
+
+/* Border top colors */
+.subTaskContainer.pending {
+  border-top: 4px solid #EAB308;
+}
+.subTaskContainer.pending:hover {
+  border-top-color: #CA8A04;
+}
+.subTaskContainer.complete {
+  border-top: 4px solid #34D399;
+}
+.subTaskContainer.complete:hover {
+  border-top-color: #2DCA81;
+}
+.subTaskContainer.overdue {
+  border-top: 4px solid #F97316;
+}
+.subTaskContainer.overdue:hover {
+  border-top-color: #EA580C;
+}
+.subTaskContainer.deleted {
+  border-top: 4px solid #F87171;
+}
+.subTaskContainer.deleted:hover {
+  border-top-color: #EF4444;
+}
+
+/* Conditional radius */
+.subTaskContainer.withDescription {
+  border-radius: 0.5rem 0.5rem 0.5rem 0rem;
+}
+.subTaskContainer.noDescription {
+  border-radius: 0.5rem 0.5rem 0.5rem 0rem;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: auto;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.saveContainer{
+  outline: red dashed 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveButton{
+  width: 5rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.saveButton.light{
+  background-color: #10B981;
+  color: white;
+}
+
+.saveButton.dark{
+  background-color: #34D399;
+  color: #F1F5F9;
+}
+
+.editDescriptionInput{
+  background-color: transparent;
+  border: solid gray 1px;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  color: #E2E8F0;
+}
+
+.editDescriptionInput::placeholder{
+  color: #E2E8F0;
+}
+
+.editDateInput{
+  background-color: transparent;
+  border: solid gray 1px;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  color: #E2E8F0;
+}
+
+.editTaskInput{
+  background-color: transparent;
+  border: solid gray 1px;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  color: #E2E8F0;
 }
 
 /*tablet*/

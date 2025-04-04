@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .todoListContainer{
   outline: red dashed 1px;
   height: 100vh;
